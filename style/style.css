@@ -20,12 +20,13 @@ header{
     color: white;
     padding: 20px;
     text-align: center;
+    height: 100px;
 }
 
 .logo{
     display: flex;
     gap: 10px;
-    align-items: center;
+   
     
 }
 
@@ -39,7 +40,7 @@ header{
     background-image: url(/assets/descarga.webp);
     background-size: cover;
     background-position: center;
-    height: 500px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,16 +58,65 @@ header{
     margin-top: 10px;
 }
 .banner1 button{
-    width: 10em;
-    height: 2em;
+    width: 160px;
+    height: 50px;
     border-radius: 1em;
     background-color: #239e9b;
     color: white;
-    font-size: 1.2em;
+    font-size: 15px;
     cursor: pointer;
     border: none;
-    margin-top: 10px;
+    margin-top: 15px;
+  
 }
+
+.banner2{
+    padding: 30px;
+    display: flex;
+    height: 750px;
+}
+.banner2 {
+    width: 100%;
+    height: 100%;
+    background-color: #239e9b;
+    /* object-fit: cover;
+    border-radius: 1em; */
+}
+.sesion1-2 {
+   width: 100%;
+    justify-content: center;
+    padding: 100px;
+    
+}
+
+.sesion1-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+        
+}
+
+.sesion2-2 {
+    width: 100%;
+    justify-content: center;
+    padding: 100px;
+}
+
+.sesion2-2 p {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sesion2-2 h2{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
 
 nav {
     display: flex;
