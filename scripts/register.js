@@ -1,17 +1,12 @@
 const userName = document.getElementById('username');
 const userMail = document.getElementById('email');
 const userPasswrd = document.getElementById('password');
-const stat = document.getElementById('status')
+const stat = document.getElementById('stat')
 const registerBtn = document.getElementById('registerBtn')
-//const form = document.getElementById('registerForm');
+const form = document.getElementById('registerForm');
 const message = document.getElementById('message');
 
-/*form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const user = document.getElementById('username').value;
-    message.textContent = `¡Bienvenid@, ${user}! Ahora eres de la familia MetaFlow🎉`;
-});
-*/
+
 
 function showMessage(msg, isError = false) {
     message.textContent = msg;
@@ -58,5 +53,10 @@ function displayData(){
     }
 }
 
-registerBtn.addEventListener('click', saveName);
 document.addEventListener('DOMContentLoaded', displayData)
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const userName = document.getElementById('username').value;
+    message.textContent = `¡Bienvenid@, ${userName}! Ahora eres de la familia MetaFlow🎉`;
+    saveName();
+});
