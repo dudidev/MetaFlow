@@ -106,7 +106,7 @@ header{
 .sesion2-2 p {
     font-size: 15px;
     color: black;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 20px;
     font-weight: 600;
 }
@@ -120,7 +120,7 @@ header{
 .sesion2-2 h3{
     font-size: 20px;
     color: black;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 20px;
 }
 
@@ -145,7 +145,7 @@ header{
 .sesion1-4 p{
     font-size: 15px;
     color: black;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 20px;
 }
 
@@ -196,7 +196,7 @@ header{
 .sesion1-3 p{
     font-size: 15px;
     color: black;
-    text-align: center;
+    /* text-align: center; */
     /* margin-top: 20px;  */
 }
 
@@ -357,4 +357,12 @@ button:hover {
     margin-top: 15px;
     color: #2bbbad;
     font-weight: bold;
+}
+
+
+
+/* ********************** Vista Create ************************** */
+
+.encabezadoCreate{
+    display: flex;
 }
