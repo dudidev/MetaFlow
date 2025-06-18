@@ -89,6 +89,12 @@ body.dark-mode .register-main{
     }
 }
 
+body.dark-mode .tituloCreat{
+    color: white;
+}
+body.dark-mode .sidebar{
+    background-color: #239e9c4d;
+}
 
 header {
     background-color: #239e9b;
