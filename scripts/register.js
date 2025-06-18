@@ -30,10 +30,8 @@ function saveName() {
     localStorage.setItem('userName', name);
     localStorage.setItem('userEmail', email);
     localStorage.setItem('userPass', pass);
-    showMessage('¡Nombre guardado con éxito!', false);
+    showMessage('¡Usuario registrado con éxito!', false);
 
-    // Actualizar la visualización en la página
-    displayData();
 
     // Limpiar el input después de guardar
     userName.value = '';
@@ -41,19 +39,7 @@ function saveName() {
     userPasswrd.value = '';
 }
 
-function displayData(){
-    const dataName = localStorage.getItem('userName');
-    const dataEmail = localStorage.getItem('userEmail');
-    const dataPass = localStorage.getItem('userPass');
 
-    if(dataName && dataEmail && dataPass){
-        stat.textContent = `Registro exitoso ${dataName}`;
-    }else{
-        stat.textContent = `No se pudo validar el registo, revisa tu info`
-    }
-}
-
-document.addEventListener('DOMContentLoaded', displayData)
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const userName = document.getElementById('username').value;
