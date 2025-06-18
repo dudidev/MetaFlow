@@ -8,8 +8,9 @@ const stat = document.getElementById('stat');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (validateLogin()) {
-        // Redirigir a la página de inicio o dashboard
-        window.location.href = './userPanel.html';
+        setTimeout(() => {
+            window.location.href = './userPanel.html';
+        }, 2000);
     }
 });
 
@@ -19,7 +20,7 @@ function showMessage(msg, isError = false) {
     message.style.display = 'block'; // Mostrar el mensaje
     setTimeout(() => {
         message.style.display = 'none'; // Ocultar después de 3 segundos
-    }, 3000);
+    }, 2000);
 }
 
 function validateLogin() {
@@ -35,7 +36,7 @@ function validateLogin() {
     const storedPass = localStorage.getItem('userPass');
 
     if (name === storedName && pass === storedPass) {
-        showMessage(`¡Bienvenido de nuevo, ${name}!`, false);
+        showMessage(`¡Bienvenido de nuevo, ${name}! Ingresando...`, false);
         return true;
     } else {
         showMessage('Credenciales incorrectas. Inténtalo de nuevo.', true);
