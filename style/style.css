@@ -9,7 +9,84 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f0f0f0;
+    background-color: #f0f0f0;
     color: #333;
+}
+
+/*MODO OSCURO*/
+body.dark-mode{
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode button{
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode .banner3 {
+    background-color: #333;
+    h2, p{
+        color: white;
+    }
+}
+body.dark-mode .banner2 {
+    background-color: #239e9c4d;
+    h2, p{
+        color: white;
+    }
+}
+body.dark-mode .banner4{
+    background-color: #333;
+    h2, p{
+        color: white;
+    }
+}
+body.dark-mode .banner5{
+    background-color: #239e9c4d;
+}
+body.dark-mode .header-login{
+    background-color: #333;
+    color: white;
+    border-bottom: solid 1px white;
+}
+body.dark-mode .header-register{
+    background-color: #333;
+    color: white;
+    border-bottom: solid 1px white;
+}
+body.dark-mode .login-main{
+    background-color: #333;
+    color: white;
+    button{
+        background-color: #239e9b;
+        color: white;
+    }
+    small{
+        color: #333;
+    }
+    a{
+        color: #239e9b;
+    }
+}
+body.dark-mode .register-main{
+    background-color: #333;
+    color: white;
+    button{
+        background-color: #239e9b;
+        color: white;
+    }
+    small{
+        color: #333;
+    }
+    a{
+        color: #239e9b;
+    }
 }
 
 
