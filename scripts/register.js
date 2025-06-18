@@ -13,7 +13,7 @@ function showMessage(msg, isError = false) {
     message.style.color = isError ? 'red' : 'green';
     message.style.display = 'block'; // Mostrar el mensaje
     setTimeout(() => {
-        messageElement.style.display = 'none'; // Ocultar después de 3 segundos
+        message.style.display = 'none'; // Ocultar después de 3 segundos
     }, 3000);
 }
 
