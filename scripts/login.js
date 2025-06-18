@@ -9,7 +9,7 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (validateLogin()) {
         setTimeout(() => {
-            window.location.href = './userPanel.html';
+            window.location.href = './vistaCreate.html';
         }, 2000);
     }
 });
