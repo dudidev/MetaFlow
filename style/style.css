@@ -14,7 +14,7 @@ body {
 }
 
 /*MODO OSCURO*/
-body.dark-mode{
+body.dark-mode {
     background-color: #333;
     color: white;
 }
@@ -24,75 +24,95 @@ body.dark-mode header {
     color: white;
 }
 
-body.dark-mode button{
+body.dark-mode button {
     background-color: white;
     color: black;
 }
 
 body.dark-mode .banner3 {
     background-color: #333;
-    h2, p{
+
+    h2,
+    p {
         color: white;
     }
 }
+
 body.dark-mode .banner2 {
     background-color: #239e9c4d;
-    h2, p{
+
+    h2,
+    p {
         color: white;
     }
 }
-body.dark-mode .banner4{
+
+body.dark-mode .banner4 {
     background-color: #333;
-    h2, p{
+
+    h2,
+    p {
         color: white;
     }
 }
-body.dark-mode .banner5{
+
+body.dark-mode .banner5 {
     background-color: #239e9c4d;
 }
-body.dark-mode .header-login{
+
+body.dark-mode .header-login {
     background-color: #333;
     color: white;
     border-bottom: solid 1px white;
 }
-body.dark-mode .header-register{
+
+body.dark-mode .header-register {
     background-color: #333;
     color: white;
     border-bottom: solid 1px white;
 }
-body.dark-mode .login-main{
+
+body.dark-mode .login-main {
     background-color: #333;
     color: white;
-    button{
+
+    button {
         background-color: #239e9b;
         color: white;
     }
-    small{
+
+    small {
         color: #333;
     }
-    a{
-        color: #239e9b;
-    }
-}
-body.dark-mode .register-main{
-    background-color: #333;
-    color: white;
-    button{
-        background-color: #239e9b;
-        color: white;
-    }
-    small{
-        color: #333;
-    }
-    a{
+
+    a {
         color: #239e9b;
     }
 }
 
-body.dark-mode .tituloCreat{
+body.dark-mode .register-main {
+    background-color: #333;
+    color: white;
+
+    button {
+        background-color: #239e9b;
+        color: white;
+    }
+
+    small {
+        color: #333;
+    }
+
+    a {
+        color: #239e9b;
+    }
+}
+
+body.dark-mode .tituloCreat {
     color: white;
 }
-body.dark-mode .sidebar{
+
+body.dark-mode .sidebar {
     background-color: #239e9c4d;
 }
 
@@ -486,8 +506,8 @@ button:hover {
 
 /* ************* Vista Create ************ */
 
-#mostrarNom{
-    
+#mostrarNom {
+
     color: #239e9b;
     display: flex;
     justify-content: center;
@@ -499,11 +519,11 @@ button:hover {
 }
 
 .tituloCreat {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 24px;
-      color: #333;
-    }
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+    color: #333;
+}
 
 /* .tituloCreat{
     background-color: antiquewhite;
@@ -517,54 +537,54 @@ button:hover {
 
 /* ************ menu hamburguesa *******************/
 #menu-toggle {
-  display: none;
+    display: none;
 }
 
 
 
 .menu-icon {
-      cursor: pointer;
-      background-color: black;
-      color: white;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-    }
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
 
 
 
 .menu-icon::before {
-  content: "\2630"; 
-  font-size: 24px;
+    content: "\2630";
+    font-size: 24px;
 }
 
 
-#menu-toggle:checked + .menu-icon::before {
-  content: "\2715"; 
+#menu-toggle:checked+.menu-icon::before {
+    content: "\2715";
 }
 
 
 .sidebar {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  top: 153px;
-  left: -270px;
-  background-color: #239e9b;
-  overflow-x: hidden;
-  transition: left 0.4s;
-  padding-top: 0px;
-  margin-top: 0px;
-  z-index: 1000;
-  border-radius: 0 10px 10px 0;
-  
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 153px;
+    left: -270px;
+    background-color: #239e9b;
+    overflow-x: hidden;
+    transition: left 0.4s;
+    padding-top: 0px;
+    margin-top: 0px;
+    z-index: 1000;
+    border-radius: 0 10px 10px 0;
+
 }
 
 .sidebar a {
-   
+
     margin: -30px 0;
     text-decoration: none;
     font-size: 20px;
@@ -572,44 +592,93 @@ button:hover {
     display: block;
     transition: 0.3s;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    word-wrap: break-word; 
+    word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .sidebar ul {
-  list-style: none;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
 
 .sidebar li {
-  margin-bottom: 1px;
+    margin-bottom: 1px;
 }
 
 
 .sidebar a:hover {
-  color: #239e9b;
-  background-color: white;
+    color: #239e9b;
+    background-color: white;
 }
 
 
-#menu-toggle:checked ~ .sidebar{
-  left: 20px;
-} 
-
-.menu-title{
-     
-      color: #239e9b;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between; 
-       position: relative;
+#menu-toggle:checked~.sidebar {
+    left: 20px;
 }
 
+.menu-title {
 
+    color: #239e9b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
 
+/*VISTA META DIARIA*/
+.section-bg {
+    padding: 20px;
+    display: grid;
+    justify-items: center;
+    height: 90vh;
+}
 
+.goal-form {
+    padding: 20px;
+    border-radius: 1em;
+    width: 50%;
+    display: grid;
+    justify-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    h2 {
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    ;
+}
+
+.ia-btns {
+    padding: 1em 0;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    button {
+        height: 5em;
+    }
+}
+
+.userGoal{
+    height: 10em;
+}
+
+textarea{
+    resize: none;
+    width: calc(100% - 0px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    min-height: 10vh;
+}
