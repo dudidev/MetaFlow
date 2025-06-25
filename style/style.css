@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -718,13 +719,16 @@ button:hover {
     justify-items: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
-    h2 {
+    h2, h3 {
         text-align: center;
         display: flex;
         align-items: center;
     }
-
     ;
+}
+
+.responseContainer{
+    width: 100%;
 }
 
 .ia-btns {
