@@ -624,27 +624,28 @@ button:hover {
     justify-content: space-between;
     position: relative;
 }
-.menu-title{
-     
-      color: #239e9b;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between; 
-       position: relative;
+
+.menu-title {
+
+    color: #239e9b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
-#metaInput1{
+#metaInput1 {
     height: 230px;
     width: 600px;
 }
 
-#metaInput2{
+#metaInput2 {
     height: 230px;
     width: 600px;
 }
 
-.content{
+.content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -652,56 +653,57 @@ button:hover {
     margin-top: 20px;
     gap: 10px;
 }
-.titulosContent{
+
+.titulosContent {
     display: flex;
     align-items: center;
-   justify-content: space-around;
+    justify-content: space-around;
     padding: 20px;
     margin-top: 20px;
 
 }
 
-            .content2{
-                height: 200px;
-                padding: 30px;
-            }
+.content2 {
+    height: 200px;
+    padding: 30px;
+}
 
-            .contentTwoInfo {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-               padding: 20px;
-                border-radius: 10px;   
-                box-shadow: 0 4px 8px 4px  rgba(0, 0, 0, 0.3);
-            }
+.contentTwoInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.3);
+}
 
-            .infoContent2 {
-                display: flex;
-                align-items: center;
-                width: 50%;
-                justify-content: center;
-            }
+.infoContent2 {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+}
 
-            .buttonCreate {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 50%;
-                list-style: none;
-            }
+.buttonCreate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    list-style: none;
+}
 
-            .buttonCreate button {
-                width: 200px;
-                height: 50px;
-                border-radius: 1em;
-                background-color: #239e9b;
-                color: white;
-                font-size: 15px;
-                cursor: pointer;
-                border: none;
-            }
+.buttonCreate button {
+    width: 200px;
+    height: 50px;
+    border-radius: 1em;
+    background-color: #239e9b;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+}
 
 /*VISTA META DIARIA*/
 .section-bg {
@@ -714,27 +716,47 @@ button:hover {
 .goal-form {
     padding: 20px;
     border-radius: 1em;
+    height: 50%;
     width: 50%;
     display: grid;
     justify-items: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
-    h2, h3 {
-        text-align: center;
+    h2 {
         display: flex;
         align-items: center;
     }
-    ;
+
+    button {
+        width: 100%;
+        height: 5em;
+        border-radius: 1em;
+        background-color: #239e9b;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        border: none;
+    }
 }
 
-.responseContainer{
+.responseContainer {
+    display: none;
+    padding: 20px 0;
     width: 100%;
+
+    h2,
+    h3 {
+        text-align: center;
+    }
+
+    ;
+
 }
 
 .ia-btns {
     padding: 1em 0;
     width: 100%;
-    height: 70%;
+    height: fit-content;
     display: flex;
     align-items: center;
     gap: 1em;
@@ -744,11 +766,11 @@ button:hover {
     }
 }
 
-.userGoal{
+.userGoal {
     height: 10em;
 }
 
-textarea{
+textarea {
     resize: none;
     width: calc(100% - 0px);
     padding: 10px;
@@ -756,5 +778,37 @@ textarea{
     border-radius: 4px;
     border: 1px solid #ddd;
     font-size: 16px;
-    min-height: 10vh;
+    min-height: 20vh;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+    display: none;
+    /* Oculto por defecto */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#ia-answer {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #e9ecef;
+    min-height: 50px;
+    white-space: pre-wrap;
 }
