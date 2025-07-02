@@ -17,19 +17,11 @@
             </div>
         </a>
         <nav class="nav-bar">
-            <button id="toggle-theme">Cambiar tema</button>
+            <button id="toggle-theme">☀️/🌙</button>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-            </ul>
-            <ul class="user-actions">
-                <a href="./templates/login.html">
-                    <li class="login">Login</li>
-                </a>
-                <a href="./templates/register.html">
-                    <li class="register">Register</li>
-                </a>
             </ul>
         </nav>
     </header>
@@ -38,10 +30,14 @@
             <div class="goal-form">
                 <h2>¿Qué meta quieres cumplir hoy?</h2>
                 <input type="text" class="userGoal" placeholder="Ingresa tu meta! Ej: 'Quiero correr 2 km hoy'">
-                <textarea name="ia-answer" id="ia-answer"></textarea>
-                <div class="ia-btns">
-                    <button class="reload-btn">Actualizar respuesta</button>
-                    <button class="add-btn">¡Añadir meta!</button>
+                <button onclick="sendToIa()">¡Recomiéndame!</button>
+                <h3>Una pequeña recomendación ;)</h3>
+                <div class="responseContainer">
+                    <textarea name="ia-answer" id="ia-answer"></textarea>
+                    <div class="ia-btns">
+                        <button class="reload-btn">Actualizar respuesta</button>
+                        <button class="add-btn">¡Añadir meta!</button>
+                </div>
                 </div>
             </div>
         </div>
