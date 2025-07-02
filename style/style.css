@@ -563,10 +563,10 @@ button:hover {
 
 
 .sidebar {
-    height: 100%;
+    height: 60%;
     width: 250px;
     position: fixed;
-    top: 153px;
+    top: 155px;
     left: -270px;
     background-color: #239e9b;
     overflow-x: hidden;
@@ -578,11 +578,12 @@ button:hover {
 
 }
 
-.sidebar a {
 
+.sidebar a {
+   
     margin: -30px 0;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     display: block;
     transition: 0.3s;
@@ -593,6 +594,11 @@ button:hover {
     white-space: nowrap;
 }
 
+#menu-toggle:checked + label + #mostrarNom + .sidebar {
+  transform: translateX(0);
+}
+
+
 .sidebar ul {
     list-style: none;
     flex-direction: column;
@@ -601,7 +607,7 @@ button:hover {
 }
 
 .sidebar li {
-    margin-bottom: 1px;
+    margin-bottom: -5px;
 }
 
 
