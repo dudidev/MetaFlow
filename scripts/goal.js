@@ -10,6 +10,9 @@ async function sendToIa() {
     const loader = document.getElementById('loader');
     const apiKeyGem = "AIzaSyDOizTOtPvrslQIC6_34RDE5gmJLgKzKgc";
 
+    // Obtener usuario logueado
+    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+
     if (!inputTask.trim()) {
         responseIa.textContent = "Por favor, ingresa algún texto.";
         return;
@@ -91,7 +94,7 @@ async function sendToIa() {
                 <div style="background:#fff;padding:2rem 2.5rem;border-radius:12px;box-shadow:0 2px 16px #0002;text-align:center;min-width:250px;">
                     <span id="modal-message" style="font-size:1.1rem;">${message}</span>
                     <br><br>
-                    <button id="close-modal" style="padding:0.5rem 1.5rem;border:none;background:#4caf50;color:#fff;border-radius:6px;cursor:pointer;">OK</button>
+                    <button id="close-modal" style="padding:0.5rem 1.5rem;border:none;background:#239e9b;color:#fff;border-radius:6px;cursor:pointer;">OK</button>
                 </div>
             `;
             document.body.appendChild(modal);
@@ -102,19 +105,27 @@ async function sendToIa() {
         }
     }
 
-    // Guardar meta y mostrar modal
+    // Guardar meta y mostrar modal (por usuario)
     function saveMeta() {
         const meta = metaInput.value.trim();
         if (meta === '') {
             showModal('Por favor, ingresa una meta');
             return;
         }
-        let metas = JSON.parse(localStorage.getItem('metas')) || [];
-        metas.push(meta);
-        localStorage.setItem('metas', JSON.stringify(metas));
+        if (!loggedUser || !loggedUser.email) {
+            showModal('No se encontró usuario logueado.');
+            return;
+        }
+        // Guardar metas por usuario
+        let metasPorUsuario = JSON.parse(localStorage.getItem('metasPorUsuario')) || {};
+        const userEmail = loggedUser.email;
+        if (!metasPorUsuario[userEmail]) {
+            metasPorUsuario[userEmail] = [];
+        }
+        metasPorUsuario[userEmail].push(meta);
+        localStorage.setItem('metasPorUsuario', JSON.stringify(metasPorUsuario));
         showModal('¡Meta guardada con éxito!');
         metaInput.value = '';
-
     }
 
     addBtn.onclick = saveMeta;
