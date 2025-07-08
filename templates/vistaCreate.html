@@ -23,40 +23,38 @@
             <ul>
                 <li><a href="./vistaCreate.html">Home</a></li>
                 <li><a href="./goal.html">Creacion Meta</a></li>
-                
+
             </ul>
         </nav>
     </header>
 
     <div class="menu-title">
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon"></label>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"></label>
 
-  <p id="mostrarNom"></p>
+        <p id="mostrarNom"></p>
 
-  <nav class="sidebar">
-    <ul>
-      <li><a href="./vistaCreate.html">Home</a></li>
-      <li><a href="/templates/userPanel.html">User Panel</a></li>
-      <li><a href="./goal.html">MetaIA</a></li>
-    </ul>
-  </nav>
-</div>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="./vistaCreate.html">Home</a></li>
+                <li><a href="./goal.html">MetaIA</a></li>
+                <li><a href="../index.html">Cerrar Sesion</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <h2 class="tituloCreat">¿CON QUÉ META QUIERES EMPEZAR HOY?</h2>
 
-    <div class="titulosContent">
-        <h3 class="titulo1">Registro de tus hábitos hoy</h3>
-        <h3 class="titulo2">Registro de tus hábitos en la semana</h3>
-    </div>
 
-
-    <div class="content">
-
-       <textarea id="metaInput1" rows="5" cols="40" placeholder="Tus metas registradas hoy..."></textarea>
-
-          <textarea id="metaInput2" rows="5" cols="40" placeholder="Tus metas semanales..."></textarea>
-
+    <div class="content metas-flex">
+        <div class="meta-block">
+            <label for="metaInput1" class="meta-label">Hoy</label>
+            <textarea id="metaInput1" rows="6" placeholder="Tus metas registradas hoy..."></textarea>
+        </div>
+        <div class="meta-block">
+            <label for="metaInput2" class="meta-label">Esta semana</label>
+            <textarea id="metaInput2" rows="6" placeholder="Tus metas semanales..."></textarea>
+        </div>
     </div>
 
     <div class="content2">
@@ -64,14 +62,14 @@
             <div class="infoContent2">
                 <h3>Cada meta empieza con una decisión. ¿Cuál será la tuya hoy?</h3>
             </div>
-        
+
             <div class="buttonCreate">
-               <li><a href="./goal.html"><button>CREAR META</button></a></li>
+                <li><a href="./goal.html"><button>CREAR META</button></a></li>
             </div>
         </div>
     </div>
 
-    
+
 
     <script src="../scripts/create.js"></script>
 
