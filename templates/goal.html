@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../assets/images/LOGOTIPO-removebg-preview.png" type="image/x-icon">
+    <title>Your Goal!</title>
+</head>
+<body>
+    <header class="encabezadoCreate">
+        <a href="./vistaCreate.html">
+            <div class="logo">
+                <img src="../assets/images/LOGOTIPO.jpg" alt="Logo de MetaFlow">
+                <h1>MetaFlow</h1>
+            </div>
+        </a>
+        <nav class="nav-bar">
+            <button id="toggle-theme">☀️/🌙</button>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+  
+                <li><a href="../templates/vistaCreate.html">Mis metas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="section-bg">
+            <div class="goal-form" id="goal-form">
+                <h2>¿Qué meta quieres cumplir hoy?</h2>
+                <input type="text" id="inputTask" class="userGoal" placeholder="Ingresa tu meta! Ej: 'Quiero correr 2 km hoy'">
+                <button onclick="sendToIa()" id="ia-btn">¡Recomiéndame!</button>
+                <div class="loader" id="loader"></div>
+                <div class="responseContainer" id="responseContainer">
+                    <h3>Una pequeña recomendación ;)</h3>
+                    <div id="ia-answer"></div>
+                    <div class="ia-btns">
+                        <button class="reload-btn" id="reload-btn">Actualizar respuesta</button>
+                        <button class="add-btn">¡Añadir meta!</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="../scripts/theme.js"></script>
+    <script src="../scripts/goal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Create</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../assets/images/LOGOTIPO-removebg-preview.png" type="image/x-icon">
+    <script src="../scripts/theme.js"></script>
+</head>
+
+<body>
+    <header class="encabezadoCreate">
+        <a href="./vistaCreate.html">
+            <div class="logo">
+                <img src="../assets/images/LOGOTIPO.jpg" alt="Logo de MetaFlow">
+                <h1>MetaFlow</h1>
+            </div>
+        </a>
+        <nav class="nav-bar">
+            <button id="toggle-theme">☀️/🌙</button>
+            <ul>
+                <li><a href="./vistaCreate.html">Home</a></li>
+                <li><a href="./goal.html">Creacion Meta</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="menu-title">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"></label>
+
+        <p id="mostrarNom"></p>
+
+        <nav class="sidebar">
+            <ul>
+                <li><a href="./vistaCreate.html">Home</a></li>
+                <li><a href="./goal.html">MetaIA</a></li>
+                <li><a href="../index.html">Cerrar Sesion</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h2 class="tituloCreat">¿CON QUÉ META QUIERES EMPEZAR HOY?</h2>
+
+
+    <div class="content metas-flex">
+        <div class="meta-block">
+            <label for="metaInput1" class="meta-label">Hoy</label>
+            <textarea id="metaInput1" rows="6" placeholder="Tus metas registradas hoy..."></textarea>
+        </div>
+        <div class="meta-block">
+            <label for="metaInput2" class="meta-label">Esta semana</label>
+            <textarea id="metaInput2" rows="6" placeholder="Tus metas semanales..."></textarea>
+        </div>
+    </div>
+
+    <div class="content2">
+        <div class="contentTwoInfo">
+            <div class="infoContent2">
+                <h3>Cada meta empieza con una decisión. ¿Cuál será la tuya hoy?</h3>
+            </div>
+
+            <div class="buttonCreate">
+                <li><a href="./goal.html"><button>CREAR META</button></a></li>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="../scripts/create.js"></script>
+
+</body>
+
+
+
+</html>

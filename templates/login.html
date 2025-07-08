@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../assets/images/LOGOTIPO-removebg-preview.png" type="image/x-icon">
+    <script src="../scripts/theme.js" defer></script>
+    <title>Login</title>
+</head>
+
+<body>
+    
+    <header class="header-login">
+        <a href="../index.html"><div class="logo">
+            <img src="../assets/images/LOGOTIPO.jpg" alt="Logo de MetaFlow" >
+            <h1>MetaFlow</h1>
+        </div></a>
+        <nav class="nav-bar">
+            <button id="toggle-theme">☀️/🌙</button>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="user-actions">
+                <a href="./login.html">
+                    <li class="login">Login</li>
+                </a>
+                <a href="./register.html">
+                    <li class="register">Register</li>
+                </a>
+            </ul>
+        </nav>
+    </header> 
+    <main class="login-main">
+        <div class="login-container">
+            <img src="../assets/images/LOGOTIPO-removebg-preview.png" alt="logo-jpg" class="logo-login">
+            <h2>¡Bienvenid@ de nuevo!</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" placeholder="Ingresa tu nombre de usuario..." required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="Ingresa tu contraseña..." required>
+                </div>
+                <button type="submit" class="loginBtn">Iniciar Sesión</button>
+                <small>¿No tienes cuenta? <a href="./register.html" style="color: #239e9b">Regístrate</a></small>
+            </form>
+            <p class="message" id="message"></p>
+            <div class="stat" id="stat"></div>
+        </div>
+    </main>
+    
+    <script src="../scripts/login.js"></script>
+</body>
+
+</html>

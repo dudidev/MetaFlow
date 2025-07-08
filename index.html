@@ -1,33 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="./assets/images/LOGOTIPO-removebg-preview.png" type="image/x-icon">
+    <script src="./scripts/theme.js" defer></script>
     <title>MetaFlow</title>
 </head>
+
 <body>
     <header>
-        <div>
-            <h1>MetaFlow</h1>
-        </div>
+        <a href="./index.html">
+            <div class="logo">
+                <img src="./assets/images/LOGOTIPO.jpg" alt="Logo de MetaFlow" srcset="">
+                <h1>MetaFlow</h1>
+            </div>
+        </a>
         <nav class="nav-bar">
+            <button id="toggle-theme">☀️/🌙</button>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <ul class="user-actions">
-                <li class="login"><a href="#login">Login</a></li>
-                <li class="register"><a href="#register">Register</a></li>
+                <a href="./templates/login.html">
+                    <li class="login">Login</li>
+                </a>
+                <a href="./templates/register.html">
+                    <li class="register">Register</li>
+                </a>
             </ul>
         </nav>
     </header>
     <main>
+        <div class="banner1">
+            <h1>Pequeños hábitos, grandes cambios.</h1>
+            <p>Descubre cómo pequeñas acciones pueden transformar tu bienestar. Da el primer paso hacia una vida más
+                saludable hoy. ¡Empieza ahora!</p>
+            <a href="./templates/login.html"><button>Empezar</button></a>
+
+        </div>
+
+
+
+        <div class="banner3">
+            <div class="sesion1-3">
+                <div class="titulo3" id="about">
+                    <h2>¿Quiénes somos?</h2>
+                </div>
+                <div class="parrafo3">
+                    <p>
+                        Somos un equipo apasionado por el bienestar, la salud mental y el desarrollo personal. Creemos
+                        firmemente que pequeños cambios diarios pueden generar grandes transformaciones en la vida de
+                        las personas. Por eso, creamos esta plataforma como un espacio seguro, práctico y motivador para
+                        ayudarte a construir hábitos saludables y sostenibles.
+
+                        Nos une el propósito de acompañarte en tu proceso de crecimiento personal, brindándote
+                        herramientas útiles, contenidos de calidad y el apoyo de una comunidad comprometida con el
+                        cambio positivo. No somos perfectos, pero estamos en el mismo camino que tú: aprendiendo,
+                        mejorando y avanzando día a día.</p>
+                </div>
+            </div>
+            <div class="sesion2-3">
+                <img src="./assets/images/img3.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="banner2">
+            <div class="sesion1-2">
+                <img src="./assets/images/img2.jpg" alt="">
+            </div>
+            <div class="sesion2-2">
+                <h2>¿COMO TE AYUDAMOS A MEJORAR TUS HABITOS?</h2>
+                <h3>En nuestra plataforma, nos enfocamos en ayudarte a transformar tu vida paso a paso, con herramientas
+                    prácticas, motivación constante y una comunidad que te acompaña. Te ayudamos a:</h3>
+                <p>- 🧠 Establecer metas claras y alcanzables
+                    Define lo que quieres cambiar y conviértelo en objetivos diarios, semanales o mensuales.</p>
+                <p>- 📅 Crear rutinas saludables
+                    Te damos plantillas, recordatorios y estrategias para formar hábitos positivos como hacer ejercicio,
+                    comer mejor, dormir bien o ser más productivo.</p>
+                <p>- 📈 Hacer seguimiento de tu progreso
+                    Visualiza tu avance en gráficos y resúmenes. Ver lo que has logrado te motivará a seguir.</p>
+                <p>- 🤝 Recibir apoyo emocional y motivacional
+                    Con mensajes motivadores, desafíos semanales y contenido educativo, te mantenemos inspirado incluso
+                    en los días difíciles.</p>
+                <p>- 📚 Aprender con contenido especializado
+                    Accede a artículos, videos y recursos creados por expertos en psicología, salud, productividad y
+                    bienestar.</p>
+            </div>
+
+        </div>
+
+
+        <div class="banner4">
+            <div class="sesion1-4">
+                <h2>¿Por qué elegirnos?</h2>
+                <p>Porque aquí no solo encontrarás consejos... encontrarás acompañamiento real. </p>
+
+                <p>✔️ Enfoque humano y cercano: Entendemos que cada persona tiene su propio ritmo. No te exigimos ser
+                    perfecto, sino avanzar a tu manera, con empatía y sin juicios. </p>
+
+                <p>✔️ Método paso a paso: Nuestro sistema está diseñado para ayudarte a construir hábitos de forma
+                    gradual, realista y sostenible, sin sentirte abrumado.</p>
+
+                <p>✔️ Herramientas prácticas y efectivas: Plantillas, recordatorios, gráficas, desafíos y contenido
+                    creado por expertos para que no solo aprendas, sino que lo pongas en práctica desde el día uno.</p>
+
+                <p>✔️ Comunidad motivadora: Nunca estarás solo. Te acompañamos con mensajes, retos colectivos y un
+                    espacio donde puedes compartir tu proceso con personas que también quieren mejorar.</p>
+
+                <p>✔️ Resultados visibles: No vendemos fórmulas mágicas, pero si te comprometes, verás cambios reales en
+                    tu energía, tu salud y tu bienestar.</p>
+            </div>
+            <div class="sesion2-4">
+                <img src="./assets/images/img4.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div class="banner5">
+            <div class="sesion1-5" id="contact">
+                <h2>Únete a nuestra comunidad</h2>
+                <p>Si estás listo para dar el primer paso hacia una vida más saludable y plena, te invitamos a unirte a
+                    nuestra comunidad. Aquí encontrarás el apoyo, las herramientas y la motivación que necesitas para
+                    transformar tu vida.</p>
+                <a href="./templates/login.html"><button>Regístrate ahora</button></a>
+            </div>
+        </div>
+
+
     </main>
     <footer>
         <p>&copy; 2025 MetaFlow. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
