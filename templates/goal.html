@@ -20,8 +20,8 @@
             <button id="toggle-theme">☀️/🌙</button>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+  
+                <li><a href="../templates/vistaCreate.html">Mis metas</a></li>
             </ul>
         </nav>
     </header>
@@ -47,4 +47,43 @@
     <script src="../scripts/theme.js"></script>
     <script src="../scripts/goal.js"></script>
 </body>
+
+<script>
+  const metaInput = document.querySelector('.userGoal');
+  const addBtn = document.querySelector('.add-btn');
+
+  function showMessage(msg, isError = false) {
+      const mensaje = document.createElement('p');
+      mensaje.textContent = msg;
+      mensaje.style.color = isError ? 'red' : 'green';
+      document.body.appendChild(mensaje);
+
+      setTimeout(() => {
+          mensaje.remove();
+      }, 3000);
+  }
+
+  function saveMeta() {
+      const meta = metaInput.value.trim();
+
+      if (meta === '') {
+          showMessage('Por favor, ingresa una meta', true);
+          return;
+      }
+
+      // Obtener metas anteriores o crear una nueva lista
+      let metas = JSON.parse(localStorage.getItem('metas')) || [];
+      metas.push(meta);
+
+      // Guardar metas nuevamente
+      localStorage.setItem('metas', JSON.stringify(metas));
+      showMessage('¡Meta guardada con éxito!');
+
+      // Limpiar input
+      metaInput.value = '';
+  }
+
+  addBtn.addEventListener('click', saveMeta);
+</script>
+
 </html>
