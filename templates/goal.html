@@ -27,13 +27,14 @@
     </header>
     <main>
         <div class="section-bg">
-            <div class="goal-form">
+            <div class="goal-form" id="goal-form">
                 <h2>¿Qué meta quieres cumplir hoy?</h2>
-                <input type="text" class="userGoal" placeholder="Ingresa tu meta! Ej: 'Quiero correr 2 km hoy'">
+                <input type="text" id="inputTask" class="userGoal" placeholder="Ingresa tu meta! Ej: 'Quiero correr 2 km hoy'">
                 <button onclick="sendToIa()">¡Recomiéndame!</button>
-                <h3>Una pequeña recomendación ;)</h3>
-                <div class="responseContainer">
-                    <textarea name="ia-answer" id="ia-answer"></textarea>
+                <div class="loader" id="loader"></div>
+                <div class="responseContainer" id="responseContainer">
+                    <h3>Una pequeña recomendación ;)</h3>
+                    <div id="ia-answer"></div>
                     <div class="ia-btns">
                         <button class="reload-btn">Actualizar respuesta</button>
                         <button class="add-btn">¡Añadir meta!</button>
@@ -44,6 +45,7 @@
     </main>
     <footer></footer>
     <script src="../scripts/theme.js"></script>
+    <script src="../scripts/goal.js"></script>
 </body>
 
 <script>
