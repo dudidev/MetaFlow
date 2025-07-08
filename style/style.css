@@ -526,6 +526,17 @@ button:hover {
     color: #333;
 }
 
+/* .nav-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #239e9b;
+    color: white;
+    position: relative;
+    z-index: 1000;
+} */
+
 
 
 
