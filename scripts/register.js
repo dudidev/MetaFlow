@@ -1,8 +1,8 @@
 const userName = document.getElementById('username');
 const userMail = document.getElementById('email');
 const userPasswrd = document.getElementById('password');
-const stat = document.getElementById('stat')
-const registerBtn = document.getElementById('registerBtn')
+const stat = document.getElementById('stat');
+const registerBtn = document.getElementById('registerBtn');
 const form = document.getElementById('registerForm');
 const message = document.getElementById('message');
 
@@ -17,7 +17,7 @@ function showMessage(msg, isError = false) {
     }, 3000);
 }
 
-function saveName() {
+function saveUser() {
     const name = userName.value.trim();
     const email = userMail.value.trim();
     const pass = userPasswrd.value.trim();
@@ -27,13 +27,22 @@ function saveName() {
         return;
     }
 
-    localStorage.setItem('userName', name);
-    localStorage.setItem('userEmail', email);
-    localStorage.setItem('userPass', pass);
+    // Obtener usuarios existentes o array vacío
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Verificar si el correo ya está registrado
+    if (users.some(user => user.email === email)) {
+        showMessage('Este correo ya está registrado.', true);
+        return;
+    }
+
+    // Agregar nuevo usuario
+    users.push({ name, email, password: pass });
+    localStorage.setItem('users', JSON.stringify(users));
     showMessage('¡Usuario registrado con éxito!', false);
 
 
-    // Limpiar el input después de guardar
+    // Limpiar los campos
     userName.value = '';
     userMail.value = '';
     userPasswrd.value = '';
@@ -42,7 +51,6 @@ function saveName() {
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const userName = document.getElementById('username').value;
-    message.textContent = `¡Bienvenid@, ${userName}! Ahora eres de la familia MetaFlow🎉`;
-    saveName();
+    message.textContent = `¡Bienvenid@, ${userName.value.trim()}! Ahora eres de la familia MetaFlow🎉`;
+    saveUser();
 });
