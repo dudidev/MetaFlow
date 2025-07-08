@@ -141,7 +141,7 @@ header {
 }
 
 .banner1 {
-    background-image: url(/assets/images/descarga.webp);
+    background-image: url(../assets/images/descarga.webp);
     background-size: cover;
     background-position: center;
     height: 550px;
