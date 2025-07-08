@@ -675,14 +675,6 @@ button:hover {
     gap: 10px;
 }
 
-.titulosContent {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-    margin-top: 20px;
-
-}
 
 .content2 {
     height: 200px;
@@ -833,4 +825,44 @@ textarea {
     background-color: #e9ecef;
     min-height: 50px;
     white-space: pre-wrap;
+}
+
+.metas-flex {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+.meta-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0001;
+    padding: 1.5rem 2rem;
+    min-width: 260px;
+}
+.meta-label {
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+.meta-block textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    resize: none;
+    min-height: 120px;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border 0.2s;
+}
+.meta-block textarea:focus {
+    border: 1.5px solid #4caf50;
+    outline: none;
 }
