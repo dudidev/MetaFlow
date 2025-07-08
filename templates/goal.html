@@ -36,7 +36,7 @@
                     <h3>Una pequeña recomendación ;)</h3>
                     <div id="ia-answer"></div>
                     <div class="ia-btns">
-                        <button class="reload-btn">Actualizar respuesta</button>
+                        <button class="reload-btn" id="reload-btn">Actualizar respuesta</button>
                         <button class="add-btn">¡Añadir meta!</button>
                 </div>
                 </div>
@@ -47,43 +47,5 @@
     <script src="../scripts/theme.js"></script>
     <script src="../scripts/goal.js"></script>
 </body>
-
-<script>
-  const metaInput = document.querySelector('.userGoal');
-  const addBtn = document.querySelector('.add-btn');
-
-  function showMessage(msg, isError = false) {
-      const mensaje = document.createElement('p');
-      mensaje.textContent = msg;
-      mensaje.style.color = isError ? 'red' : 'green';
-      document.body.appendChild(mensaje);
-
-      setTimeout(() => {
-          mensaje.remove();
-      }, 3000);
-  }
-
-  function saveMeta() {
-      const meta = metaInput.value.trim();
-
-      if (meta === '') {
-          showMessage('Por favor, ingresa una meta', true);
-          return;
-      }
-
-      // Obtener metas anteriores o crear una nueva lista
-      let metas = JSON.parse(localStorage.getItem('metas')) || [];
-      metas.push(meta);
-
-      // Guardar metas nuevamente
-      localStorage.setItem('metas', JSON.stringify(metas));
-      showMessage('¡Meta guardada con éxito!');
-
-      // Limpiar input
-      metaInput.value = '';
-  }
-
-  addBtn.addEventListener('click', saveMeta);
-</script>
 
 </html>
