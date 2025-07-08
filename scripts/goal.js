@@ -1,5 +1,6 @@
 async function sendToIa() {
     document.getElementById('goal-form').style.height = '100%';
+    document.getElementById('ia-btn').style.display = 'none';
     document.getElementById('responseContainer').style.display = 'block';
     const responseIa = document.getElementById('ia-answer');
     const inputTask = document.getElementById('inputTask').value;
@@ -11,11 +12,6 @@ async function sendToIa() {
 
     if (!inputTask.trim()) {
         responseIa.textContent = "Por favor, ingresa algún texto.";
-        return;
-    }
-
-    if (apiKeyGem === "YOUR_API_KEY") {
-        responseIa.innerHTML = "<strong>Error:</strong> Por favor, reemplaza 'YOUR_API_KEY' con tu clave de API real en el código JavaScript.";
         return;
     }
 
@@ -118,6 +114,7 @@ async function sendToIa() {
         localStorage.setItem('metas', JSON.stringify(metas));
         showModal('¡Meta guardada con éxito!');
         metaInput.value = '';
+
     }
 
     addBtn.onclick = saveMeta;
